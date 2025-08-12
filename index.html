@@ -3,103 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <title>Mark's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f6f8;
-      color: #333;
+      background-color: #f5f7fa;
+      color: #2c3e50;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #2c3e50;
+      background: linear-gradient(to right, #1f2d3d, #2c3e50);
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
+    header h1 {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
     nav {
-      background-color: #34495e;
+      background-color: #1f2d3d;
       display: flex;
       justify-content: center;
-      padding: 10px;
       flex-wrap: wrap;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
-      color: white;
+      color: #ecf0f1;
       text-decoration: none;
-      margin: 10px 15px;
-      font-weight: bold;
+      margin: 10px 20px;
+      font-weight: 600;
       transition: color 0.3s ease;
+      font-family: 'Roboto Mono', monospace;
     }
 
     nav a:hover {
-      color: #1abc9c;
+      color: #00cec9;
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+      font-family: 'Roboto Mono', monospace;
+      color: #34495e;
+      border-bottom: 2px solid #dfe6e9;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      font-size: 1.8em;
     }
 
     ul {
       list-style-type: square;
       padding-left: 20px;
+      line-height: 1.6;
     }
 
     img {
       width: 100%;
       max-width: 600px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
     }
 
-    .contact-button {
+    .contact-button, .resume-button, .github-link, .linkedin-link, .course-link {
       display: inline-block;
-      background-color: #2980b9;
+      background-color: #0984e3;
       color: white;
       padding: 12px 24px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       margin-top: 20px;
-      transition: background-color 0.3s ease;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    .contact-button:hover {
-      background-color: #1abc9c;
-    }
-
-    .youtube-link {
-      display: inline-block;
-      background-color: #e74c3c;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    .youtube-link:hover {
-      background-color: #c0392b;
+    .contact-button:hover, .resume-button:hover, .github-link:hover, .linkedin-link:hover, .course-link:hover {
+      background-color: #00cec9;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #ecf0f1;
+      padding: 25px;
+      background-color: #dfe6e9;
       font-size: 0.9em;
+      color: #636e72;
     }
   </style>
 </head>
@@ -107,88 +116,71 @@
 
   <header>
     <h1>Mark's Portfolio</h1>
-    <p>QA Analyst | Fintech | Biotech | AI Enthusiast</p>
+    <p>QA Analyst | Fintech | Biotech | AI Enthusiast | History Buff | Curious Explorer</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#achievements">Achievements</a>
     <a href="#hobbies">Hobbies</a>
-    <a href="#languages">Languages</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
-    <a href="#youtube">YouTube</a>
+    <a href="#course">Course</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="https://Markosky.github.io/Portfolio-Site/images/QA.jpeg" alt="QA Analyst" width="275" height="250">
-    <p>ISTQB-certified QA analyst with a passion for precision, performance, and problem-solving. I thrive in fast-paced environments and love building systems that work flawlessly. Open to roles in QA, AI, data science, and financial analysis.</p>
+    <img src="https://Markosky.github.io/Portfolio-Site/images/QA.jpeg" alt="QA Analyst">
+    <p>ISTQB-certified QA analyst with a passion for precision, performance, and problem-solving. I thrive in fast-paced environments and love building systems that work flawlessly. I use AI extensively in my daily work, experimenting with the latest LLMs and agentic AI to create intelligent workflows. I'm highly curious and always exploring new technologies and ideas.</p>
   </section>
 
   <section id="achievements">
     <h2>Achievements</h2>
-    <img src="https://Markosky.github.io/Portfolio-Site/images/Fintech.jpeg" alt="Fintech Growth" width="375" height="250">
+    <img src="https://Markosky.github.io/Portfolio-Site/images/Fintech.jpeg" alt="Fintech Growth">
     <ul>
       <li>Completed advanced courses in AI, data science, and QA methodologies</li>
       <li>Built algorithmic trading bots using Python and quantitative models</li>
       <li>Led QA efforts in fintech, biotech, and energy sectors</li>
+      <li>Developed intelligent automation workflows using cutting-edge AI tools</li>
     </ul>
   </section>
 
   <section id="hobbies">
-  <h2>🎧 Hobbies</h2>
-  <ul>
-    <li>I enjoy hiking in the Rockies, photography, and tinkering with tech such as IoT systems.</li>
-    <li>
-      I'm also an <strong>amateur music producer and enthusiast</strong>. I love experimenting with beats and sound design in my free time.<br>
-      🎶 Check out my work on 
-      <a href="Check out DJ Mark Sky on #SoundCloud
-https://on.soundcloud.com/UAkN1MSEDYxQTZcwzd" target="_blank" rel="noopener noreferrer">
-        SoundCloud
-      </a>
-    </li>
-  </ul>
-  </section>
-
-  <section id="languages">
-    <h2>Languages Spoken</h2>
+    <h2>🎧 Hobbies</h2>
     <ul>
-      <li>English (native)</li>
-      <li>Polish (native)</li>
-      <li>Russian (advanced)</li>
-      <li>Mandarin Chinese (basic)</li>
+      <li>Hiking in the Rockies, photography, and tinkering with IoT devices</li>
+      <li>Exploring optics and stargazing under clear Alberta skies</li>
+      <li>Learning languages and studying global cultures</li>
+      <li>Amateur DJ and self-taught music producer — I love experimenting with beats and sound design</li>
+      <li>History buff and follower of current events — always curious about the world</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <img src="https://Markosky.github.io/Portfolio-Site/images/AI.jpeg" alt="AI Experiments" width="275" height="250">
-    <p>Coming soon: a showcase of my trading bots, QA automation scripts, and AI experiments.</p>
+    <img src="https://Markosky.github.io/Portfolio-Site/images/AI.jpeg" alt="AI Experiments">
+    <p>Coming soon: a showcase of my trading bots, QA automation scripts, and AI experiments using the latest LLMs and agentic frameworks.</p>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <p>You can request a copy of my resume or view it on my LinkedIn profile.</p>
+    <p>You can download my resume or view my professional profile:</p>
+    <a class="resume-button" href="https://Markosky.github.io/Portfolio-Site/files/Mark_S_Resume.pdf" download>Download Resume</a>
+    <a class="linkedin-link" href="https://www.linkedin.com/in/marksw86" target="_blank">View LinkedIn</a>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <p>If you're a hiring manager or collaborator, feel free to reach out!</p>
     <a class="contact-button" href="mailto:sirmarkski@gmail.com">Email Me</a>
+    <a class="github-link" href="https://github.com/Markosky" target="_blank">Visit GitHub</a>
   </section>
 
-  <section id="youtube">
-    <h2>YouTube Channel</h2>
-    <p>My YouTube channel is currently under construction. Check back soon for tutorials, project walkthroughs, and tech insights!</p>
-    <a class="youtube-link" href="https://www.youtube.com/@sirmarkski" target="_blank">Visit My Channel</a>
-  </section>
-
-  <section id="my courses">
-    <h2>MarkCraft Academy</h2>
-    <p>My Udemy courses are coming soon!</p>
-
+  <section id="course">
+    <h2>Udemy QA Course</h2>
+    <p>I'm currently building a comprehensive QA course for Udemy. It will cover automation, testing strategies, and real-world workflows. Under construction — stay tuned!</p>
+    <a class="course-link" href="https://www.udemy.com/user/mark-s-qa-course" target="_blank">Visit Course Page</a>
   </section>
 
   <footer>
