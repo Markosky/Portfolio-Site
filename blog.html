@@ -86,7 +86,7 @@
 
   <section>
     <article>
-      <h2> How to Boost Your QA Productivity with AI /h2>
+      <h2> How to Boost Your QA Productivity with AI </h2>
       <img src="https://Markosky.github.io/Portfolio-Site/images/Automation.jpeg" alt="QA Automation">
       <p>
 
@@ -129,10 +129,82 @@ In competitive terms, this translates into faster innovation, fewer production b
 - In practice: Shortens PR validation from hours to minutes, enabling faster deployment cadence.
     
     <article>
-      <h2>🤖 Exploring Agentic AI Workflows</h2>
-      <img src="https://via.placeholder.com/600x300?text=Agentic+AI" alt="Agentic AI">
-      <p>Share your experiments with LLMs and agentic frameworks. This is where you can dive into your AI workflows and how they integrate with QA and automation.</p>
+      <h2> Automation Testing Tips to Build Reliable, Scalable Suites</h2>
+      <img src="https://Markosky.github.io/Portfolio-Site/images/AutomationTips.jpeg">
+      <p> </p>
     </article>
+
+Automation testing can be a massive productivity boost — or a fragile time sink that breaks every sprint. The difference comes down to how you write, maintain, and evolve your tests.
+
+By putting stability and maintainability at the heart of your approach from the start, you avoid the trap of “automating chaos,” where your test suite causes more noise than insight.
+
+
+1. Write Tests That Resist UI Fragility
+
+- Avoid brittle selectors: Choose stable, intentional attributes (data-testid, aria-label) instead of volatile CSS classes or XPath tied to page layout.  
+- Abstract selectors: Keep them in a central config or helper file so one update fixes every reference.  
+- Example: In Cypress, cy.get('[data-testid="checkout-btn"]') is far less fragile than a multi‑level .container > div:nth-child(3) > button chain.
+
+Why it matters: This small discipline keeps tests green through harmless UI tweaks, so failures mean something’s really broken.
+
+
+2. Test Behavior, Not Implementation
+
+- Assert against user‑visible outcomes, not DOM arrangement or internal variables.  
+- Treat the application like a black box: simulate actions, then check the results as a user would.
+
+Why it matters: Implementation details can shift with refactors, but expected behaviors tend to stay constant — protecting your tests from “false alarms.”
+
+
+3. Keep Tests Independent and Isolated
+
+- Give each test its own setup (fixtures, API mocks, seeded data).  
+- Eliminate hidden dependencies where one test’s outcome affects the next.  
+- Randomize execution order occasionally to flush out unintentional coupling.
+
+Why it matters: Independence allows parallel runs and selective execution without introducing flakiness.
+
+
+4. Control Test Data and Environments
+
+- Work with stable, predictable datasets and mock unreliable third‑party services.  
+- Reset state between tests using lifecycle hooks (beforeEach, afterEach) to guarantee a clean slate.
+
+Why it matters: When your test data changes unpredictably, so will your test results — often for reasons unrelated to the feature under test.
+
+
+5. Avoid Over‑Automation
+
+- Automate high‑value, repeatable flows that run often and are critical to product stability.  
+- Keep niche or one‑time scenarios manual — it’s faster, cheaper, and less distracting.
+
+Why it matters: Automation has a maintenance cost. Spend that budget where it produces consistent returns.
+
+
+6. Make Failures Easy to Diagnose
+
+- Capture screenshots or video at the moment of failure.  
+- Provide clear, targeted error messages that point straight to the issue.  
+- Tag tests by feature or risk level so you can filter runs and reports easily.
+
+Why it matters: The faster you understand why a test failed, the faster you can fix the root cause and move on.
+
+
+7. Review, Refactor, Repeat 
+
+- Schedule periodic test reviews just like code reviews.  
+- Look for redundant, outdated, or brittle tests and prune them.  
+- Update patterns to match evolving product architecture and testing best practices.
+
+Why it matters: Test suites are living systems — if you don’t actively tend them, they decay.
+
+
+Common Pitfalls to Avoid
+
+1. UI‑Only Obsession: Ignoring API and integration tests leaves coverage gaps.  
+2. Fragile Waits: Overusing fixed sleeps instead of waiting for explicit conditions is a recipe for flakiness.  
+3. Monolith Specs: Huge, catch‑all test files are slow to run and painful to maintain.  
+4. Skipping Peer Review: Tests deserve the same rigor as production code — unreviewed tests spread bad patterns fast.
 
     <a class="back-link" href="index.html">← Back to Portfolio</a>
   </section>
